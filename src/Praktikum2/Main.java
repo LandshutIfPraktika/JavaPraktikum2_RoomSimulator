@@ -3,19 +3,12 @@ package Praktikum2;
 public class Main {
 
     public static void main(String[] args) {
-        Bed myBed = new Bed(Manufacturer.ROLFBENZ);
-        myBed.coverBed();
-        myBed.doBed();
-        myBed.print();
-        myBed.use();
-        myBed.print();
-        Cabinet myCabinet = new Cabinet(Manufacturer.XXXLUTZ);
-        myCabinet.open();
-        myCabinet.print();
-        Light myLight = new Light();
-        myLight.switchOn();
-        myLight.renewBulb(120);
-        myLight.print();
+        Room myRoom = new Room(Manufacturer.ROLFBENZ,120,60,Manufacturer.XXXLUTZ,Manufacturer.IKEA,Manufacturer.IKEA);
+        myRoom.getBedsideLamp().switchOn();
+        myRoom.getBed().coverBed();
+        myRoom.getBed().doBed();
+        myRoom.getLocker().open();
+        myRoom.print();
 
     }
 }
