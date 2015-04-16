@@ -1,19 +1,23 @@
 package Praktikum2;
 
+import java.time.Clock;
+import java.time.Instant;
+
 /**
  * Created by Georg on 15.04.2015.
  */
 public class Bed {
     private boolean made = false;
     private boolean covered = false;
-    private long timeOfManufacture;
+    private Instant timeOfManufacture;
     private Manufacturer manufacturer;
 
+    private static Clock clock = Clock.systemUTC();
 
 
     public Bed(Manufacturer manufacturer){
         this.manufacturer = manufacturer;
-        this.timeOfManufacture  = System.nanoTime();
+        this.timeOfManufacture  = clock.instant();
     }
 
     public Bed(){
