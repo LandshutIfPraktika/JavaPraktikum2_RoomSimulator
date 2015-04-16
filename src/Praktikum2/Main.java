@@ -12,5 +12,10 @@ public class Main {
         Cabinet myCabinet = new Cabinet(Manufacturer.XXXLUTZ);
         myCabinet.open();
         myCabinet.print();
+        Light myLight = new Light();
+        myLight.switchOn();
+        myLight.renewBulb(120);
+        myLight.print();
+
     }
 }
